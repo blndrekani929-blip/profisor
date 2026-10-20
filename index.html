@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝐏𝐑𝐎𝐅𝐈𝐒𝐎𝐑 | کۆگەها بەرنامە و فایلا IPA</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        crimson: {
+                            DEFAULT: '#DC2626',
+                            glow: '#EF4444',
+                            dark: '#991B1B',
+                            accent: '#FF0033'
+                        },
+                        darkbg: '#0A0A0C',
+                        cardbg: '#141418',
+                        glass: 'rgba(26, 26, 32, 0.75)'
+                    },
+                    fontFamily: {
+                        sans: ['Tajawal', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #0A0A0C;
+            color: #F3F4F6;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(22, 22, 28, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-nav {
+            background: rgba(10, 10, 12, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(220, 38, 38, 0.2);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0A0A0C;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #26262E;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #DC2626;
+        }
+
+        .crimson-glow {
+            box-shadow: 0 0 25px rgba(220, 38, 38, 0.35);
+        }
+
+        .crimson-text-glow {
+            text-shadow: 0 0 15px rgba(239, 68, 68, 0.6);
+        }
+
+        .tab-btn.active {
+            background: linear-gradient(135deg, #DC2626 0%, #991B1B 100%);
+            color: #FFFFFF;
+            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-red-600 selection:text-white">
+
+    <!-- Navbar Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-red-700 via-red-600 to-red-500 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-red-900/50 group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-crown text-lg"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-2xl font-extrabold tracking-wider text-white crimson-text-glow font-mono">𝐏𝐑𝐎𝐅𝐈𝐒𝐎𝐑</span>
+                    <span class="text-xs text-red-400/80 -mt-1 tracking-widest font-medium">STORE & IPA SIGNER</span>
+                </div>
+            </a>
+
+            <div class="flex items-center gap-3">
+                <button onclick="openVIPModal()" class="relative inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-red-600 to-red-800 text-white font-bold text-sm shadow-md hover:shadow-red-600/40 hover:scale-105 transition-all">
+                    <i class="fa-solid fa-shield-halved text-amber-300 animate-pulse"></i>
+                    <span>بڕواناما VIP</span>
+                </button>
+                <button onclick="openSocialModal()" class="w-10 h-10 rounded-xl glass-card flex items-center justify-center text-gray-300 hover:text-red-500 hover:border-red-500/50 transition-colors">
+                    <i class="fa-solid fa-paper-plane text-base"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow pt-28 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+
+        <!-- Hero Banner Section -->
+        <section class="relative rounded-3xl overflow-hidden mb-12 p-8 sm:p-12 glass-card border border-red-500/20 bg-gradient-to-b from-red-950/20 to-transparent">
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-red-600/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="relative z-10 max-w-2xl">
+                <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-bold mb-4">
+                    <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+                    تایبەت ب ئایفۆن و پێداویستیێن iOS
+                </span>
+                <h1 class="text-3xl sm:text-5xl font-black text-white leading-tight mb-4">
+                    کۆگەها فەرمی یا <span class="text-red-500 crimson-text-glow">𝐏𝐑𝐎𝐅𝐈𝐒𝐎𝐑</span>
+                </h1>
+                <p class="text-gray-300 text-sm sm:text-base mb-8 leading-relaxed">
+                    داگرتنا هەمی جۆرێن بەرنامە، یاریێن هاککری، و فایلا IPA ب ڕێکێن زۆر ئاسان دگەل ئامرازا کێشانا ئیمزایێ د ناڤ مالپەری دا!
+                </p>
+
+                <div class="flex flex-wrap gap-4">
+                    <a href="#signer" class="px-6 py-3.5 rounded-2xl bg-red-600 hover:bg-red-700 text-white font-bold text-sm flex items-center gap-2 crimson-glow transition-all">
+                        <i class="fa-solid fa-pen-nib"></i>
+                        <span>ئامرازا ئیمزاکرنا IPA</span>
+                    </a>
+                    <a href="#apps" class="px-6 py-3.5 rounded-2xl glass-card hover:bg-white/5 text-white font-bold text-sm flex items-center gap-2 transition-all">
+                        <i class="fa-solid fa-border-all"></i>
+                        <span>سەحکە بەرنامەیان</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search and Filter Controls -->
+        <section id="apps" class="mb-8">
+            <div class="flex flex-col md:flex-row gap-4 items-center justify-between">
+                <div class="relative w-full md:w-96">
+                    <i class="fa-solid fa-magnifying-glass absolute right-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                    <input type="text" id="searchInput" oninput="filterApps()" placeholder="ل ناڤی یان وەشانی بگەڕییە..." class="w-full pr-11 pl-4 py-3 rounded-2xl glass-card text-sm text-white placeholder-gray-400 focus:outline-none focus:border-red-500/80 transition-colors">
+                </div>
+
+                <div class="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0">
+                    <button onclick="setCategory('all')" class="tab-btn active px-5 py-2.5 rounded-xl text-sm font-bold whitespace-nowrap transition-all">هەمی</button>
+                    <button onclick="setCategory('apps')" class="tab-btn px-5 py-2.5 rounded-xl glass-card text-gray-300 text-sm font-bold whitespace-nowrap hover:text-white transition-all">بەرنامە</button>
+                    <button onclick="setCategory('games')" class="tab-btn px-5 py-2.5 rounded-xl glass-card text-gray-300 text-sm font-bold whitespace-nowrap hover:text-white transition-all">یاری</button>
+                    <button onclick="setCategory('ipa')" class="tab-btn px-5 py-2.5 rounded-xl glass-card text-gray-300 text-sm font-bold whitespace-nowrap hover:text-white transition-all">فایلێن IPA</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Apps Grid List -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16" id="appsGrid">
+        </section>
+
+        <!-- Native Web IPA Signing Utility Section -->
+        <section id="signer" class="glass-card rounded-3xl p-8 sm:p-10 border border-red-500/30 relative overflow-hidden">
+            <div class="max-w-3xl mx-auto text-center mb-8">
+                <span class="inline-block px-3 py-1 rounded-full bg-red-500/10 text-red-400 text-xs font-bold mb-3">ONLINE SIGNER</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-3">ئامرازا ئیمزاکرنا IPA ب بڕوانامێ</h2>
+                <p class="text-gray-400 text-sm">فایلا IPA دگەل بڕواناما خۆ پێکڤە هەڵبژێرە دا بۆ تە بکەینە بەرهەڤ بۆ ئینستۆڵکرنێ.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div class="border-2 border-dashed border-gray-700 hover:border-red-500/50 rounded-2xl p-6 text-center transition-colors cursor-pointer bg-black/20" onclick="document.getElementById('ipaFile').click()">
+                    <i class="fa-solid fa-file-arrow-up text-3xl text-red-500 mb-3"></i>
+                    <h4 class="text-white font-bold text-sm mb-1">فایلا `.ipa` بپەستێنە</h4>
+                    <p class="text-gray-400 text-xs" id="ipaFileName">هیچ فایلەک نەهاتیە دیارکرن</p>
+                    <input type="file" id="ipaFile" accept=".ipa" class="hidden" onchange="updateFileName(this, 'ipaFileName')">
+                </div>
+
+                <div class="border-2 border-dashed border-gray-700 hover:border-red-500/50 rounded-2xl p-6 text-center transition-colors cursor-pointer bg-black/20" onclick="document.getElementById('p12File').click()">
+                    <i class="fa-solid fa-key text-3xl text-red-500 mb-3"></i>
+                    <h4 class="text-white font-bold text-sm mb-1">فایلا بڕوانامێ `.p12`</h4>
+                    <p class="text-gray-400 text-xs" id="p12FileName">هیچ فایلەک نەهاتیە دیارکرن</p>
+                    <input type="file" id="p12File" accept=".p12" class="hidden" onchange="updateFileName(this, 'p12FileName')">
+                </div>
+            </div>
+
+            <div class="max-w-md mx-auto mt-6">
+                <input type="password" id="p12Pass" placeholder="پاسۆردێ بڕوانامێ (ئەگەر هەیە)..." class="w-full px-4 py-3 rounded-xl glass-card text-sm text-white placeholder-gray-400 focus:outline-none focus:border-red-500">
+            </div>
+
+            <div class="text-center mt-8">
+                <button onclick="startSigning()" class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-red-600 to-red-800 text-white font-extrabold text-sm shadow-lg hover:shadow-red-600/50 transition-all">
+                    دەستپێکرنا ئیمزاکرنێ (Sign IPA)
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- App Detail Modal -->
+    <div id="appModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden">
+        <div class="glass-card max-w-md w-full rounded-3xl p-6 border border-red-500/30 relative">
+            <button onclick="closeAppModal()" class="absolute top-4 left-4 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:text-white">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- VIP Certificate Modal -->
+    <div id="vipModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden">
+        <div class="glass-card max-w-md w-full rounded-3xl p-6 border border-red-500/30 relative text-center">
+            <button onclick="closeVIPModal()" class="absolute top-4 left-4 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:text-white">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="w-16 h-16 rounded-2xl bg-red-600/20 text-red-500 flex items-center justify-center text-3xl mx-auto mb-4 border border-red-500/40">
+                <i class="fa-solid fa-crown"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">کڕینا بڕواناما VIP</h3>
+            <p class="text-gray-300 text-xs leading-relaxed mb-6">
+                بڕواناما تەواو پاراستی بۆ ماوەی ئێک ساڵ بۆ هەمی ئامێرێن ئایفۆن و ئایپاد بێ راوەستیان!
+            </p>
+            <div class="space-y-3 mb-6 text-right text-xs text-gray-300 bg-black/30 p-4 rounded-xl border border-white/5">
+                <div class="flex items-center gap-2"><i class="fa-solid fa-check text-red-500"></i> ژێبرنا نەهێلانا کارکرنا فایلا</div>
+                <div class="flex items-center gap-2"><i class="fa-solid fa-check text-red-500"></i> پشتیڤانیا ڕاستەوخۆ 24/7</div>
+                <div class="flex items-center gap-2"><i class="fa-solid fa-check text-red-500"></i> کارکرن ل سەر وەشانێن iOS 15 - iOS 18</div>
+            </div>
+            <a href="https://t.me/profisoor96" target="_blank" class="block w-full py-3 rounded-xl bg-red-600 text-white font-bold text-sm shadow-lg hover:bg-red-700 transition-colors">
+                پەیوەندی ب تەلیگرامی بکە
+            </a>
+        </div>
+    </div>
+
+    <!-- Social Links Modal -->
+    <div id="socialModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden">
+        <div class="glass-card max-w-sm w-full rounded-3xl p-6 border border-red-500/30 relative text-center">
+            <button onclick="closeSocialModal()" class="absolute top-4 left-4 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:text-white">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 class="text-lg font-bold text-white mb-4">تۆڕێن جڤاکی یێن 𝐏𝐑𝐎𝐅𝐈𝐒𝐎𝐑</h3>
+            <div class="space-y-3">
+                <a href="https://t.me/profisoor96" target="_blank" class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-red-600/20 text-white border border-white/5 hover:border-red-500/50 transition-all">
+                    <i class="fa-brands fa-telegram text-sky-400 text-xl"></i>
+                    <span class="text-sm font-bold">کانالا تەلیگرامی</span>
+                </a>
+                <a href="https://www.tiktok.com/@profisoor96" target="_blank" class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-red-600/20 text-white border border-white/5 hover:border-red-500/50 transition-all">
+                    <i class="fa-brands fa-tiktok text-pink-500 text-xl"></i>
+                    <span class="text-sm font-bold">تیک تۆک</span>
+                </a>
+                <a href="https://www.youtube.com/@blnd.96" target="_blank" class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-red-600/20 text-white border border-white/5 hover:border-red-500/50 transition-all">
+                    <i class="fa-brands fa-youtube text-red-500 text-xl"></i>
+                    <span class="text-sm font-bold">یوتیوب</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-red-500/20 py-8 bg-black/40">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-gray-400 text-xs font-mono mb-2">© 2026 𝐏𝐑𝐎𝐅𝐈𝐒𝐎𝐑 STORE - هەمی ماف پاراستینە</p>
+            <p class="text-gray-500 text-[11px]">دیزاینکڕی ب ئاستەکێ زۆر بەرز ب شێوازێ iOS</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Data & Logic -->
+    <script>
+        const appsData =         const appsData = [
+            // بەرنامێن تە یێن بەرێ ل ڤێرەنە...
+            
+            // 🔽 ل ڤێرێ بەرنامەیێ نوی زێدە بکە:
+            {
+                id: 10, // ژمارەکا نوی بدە ئایتمی
+                title: 'ناڤێ بەرنامەی یان یاریا تە',
+                category: 'apps', // ئەگەر بەرنامە بیت 'apps'، ئەگەر یاری بیت 'games'، ئەگەر فایل 'ipa'
+                version: 'v1.0',
+                size: '50 MB',
+                icon: 'لینکێ ڕاستەوخۆ یێ وێنەیێ ئایکۆنێ',
+                https://bot.ipasign.cc/dl/kV9uRII9RyWh
+                description: 'زانیاریەکا کورت ب بادینی دەربارەی بەرنامەی.',
+                badge: 'NEW'
+            }
+        ];
+
+            {
+                id: 1,
+                title: 'Unc0ver Jailbreak',
+                category: 'apps',
+                version: 'v8.0.2',
+                size: '45 MB',
+                icon: 'https://img.icons8.com/color/96/apple-app-store.png',
+                downloadUrl: '#',
+                description: 'ئامرازا جەیلبرێکا ئایفۆنێ بۆ وەشانێن iOS 11.0 هەتا 14.8.',
+                badge: 'Updated'
+            },
+            {
+                id: 2,
+                title: 'TrollStore Helper',
+                category: 'apps',
+                version: 'v2.0.11',
+                size: '12 MB',
+                icon: 'https://img.icons8.com/color/96/ghost.png',
+                downloadUrl: '#',
+                description: 'دابەزاندنا فایلا IPA بێ بەسەرچوونا بڕوانامێ ب بەردەوامی.',
+                badge: 'Popular'
+            },
+            {
+                id: 3,
+                title: 'PUBG Mobile Hack',
+                category: 'games',
+                version: 'v3.1.0',
+                size: '1.9 GB',
+                icon: 'https://img.icons8.com/color/96/pubg.png',
+                downloadUrl: '#',
+                description: 'یاریا پوبجی ب شێوازێ هاککری ب بێ بنبوونا کشف و ڕادار.',
+                badge: 'VIP'
+            },
+            {
+                id: 4,
+                title: 'GTA San Andreas Mod',
+                category: 'games',
+                version: 'v2.0',
+                size: '1.8 GB',
+                icon: 'https://img.icons8.com/color/96/gta-5.png',
+                downloadUrl: '#',
+                description: 'یاریا GTA ب شێوازێ هاککری و پارێن بێ سنوور.',
+                badge: 'New'
+            },
+            {
+                id: 5,
+                title: 'Tiktok Mod + Unlimited',
+                category: 'ipa',
+                version: 'v32.0',
+                size: '110 MB',
+                icon: 'https://img.icons8.com/color/96/tiktok.png',
+                downloadUrl: '#',
+                description: 'داگرتنا ڤیدیۆیان ب بێ نیشانا ئاڤێ دگەل گوهۆرینا وڵاتان.',
+                badge: 'Mod'
+            },
+            {
+                id: 6,
+                title: 'ESign Certificate IPA',
+                category: 'ipa',
+                version: 'v5.0.2',
+                size: '28 MB',
+                icon: 'https://img.icons8.com/color/96/signature.png',
+                downloadUrl: '#',
+                description: 'باشترین بەرنامە بۆ ئیمزاکرنا فایلا IPA ل سەر موبایلێ ڕاستەوخۆ.',
+                badge: 'Essential'
+            }
+        ];
+
+        let activeCategory = 'all';
+
+        function renderApps() {
+            const grid = document.getElementById('appsGrid');
+            const searchVal = document.getElementById('searchInput').value.toLowerCase();
+            grid.innerHTML = '';
+
+            const filtered = appsData.filter(app => {
+                const matchesCat = activeCategory === 'all' || app.category === activeCategory;
+                const matchesSearch = app.title.toLowerCase().includes(searchVal) || app.version.toLowerCase().includes(searchVal);
+                return matchesCat && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full text-center py-12 text-gray-500">
+                        <i class="fa-solid fa-box-open text-4xl mb-3 block"></i>
+                        هیچ بەرنامەیەک ب ڤان زانیاریان نەهاتە لێدۆزین.
+                    </div>
+                `;
+                return;
+            }
+
+            filtered.forEach(app => {
+                const card = document.createElement('div');
+                card.className = 'glass-card rounded-2xl p-5 flex flex-col justify-between hover:border-red-500/40 transition-all duration-300 group';
+                card.innerHTML = `
+                    <div>
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <img src="${app.icon}" alt="${app.title}" class="w-14 h-14 rounded-2xl object-cover shadow-md group-hover:scale-105 transition-transform">
+                                <div>
+                                    <h3 class="font-bold text-white text-base group-hover:text-red-400 transition-colors">${app.title}</h3>
+                                    <div class="flex items-center gap-2 mt-1">
+                                        <span class="text-xs text-gray-400 font-mono">${app.version}</span>
+                                        <span class="text-[10px] px-2 py-0.5 rounded-full bg-white/5 text-gray-400 font-mono">${app.size}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="text-[10px] font-bold px-2.5 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-red-400">${app.badge}</span>
+                        </div>
+                        <p class="text-gray-400 text-xs line-clamp-2 mb-4 leading-relaxed">${app.description}</p>
+                    </div>
+                    <div class="flex items-center gap-2 pt-3 border-t border-white/5">
+                        <button onclick="openAppModal(${app.id})" class="flex-1 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-white font-bold text-xs transition-colors">
+                            زانیاری
+                        </button>
+                        <a href="${app.downloadUrl}" class="flex-1 py-2.5 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold text-xs text-center shadow-md transition-colors">
+                            داگرتن
+                        </a>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function setCategory(cat) {
+            activeCategory = cat;
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+                btn.classList.add('glass-card', 'text-gray-300');
+            });
+            event.target.classList.add('active');
+            event.target.classList.remove('glass-card', 'text-gray-300');
+            renderApps();
+        }
+
+        function filterApps() {
+            renderApps();
+        }
+
+        function openAppModal(id) {
+            const app = appsData.find(a => a.id === id);
+            if (!app) return;
+
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = `
+                <div class="text-center">
+                    <img src="${app.icon}" class="w-20 h-20 rounded-2xl mx-auto mb-3 shadow-lg border border-white/10">
+                    <h3 class="text-xl font-bold text-white mb-1">${app.title}</h3>
+                    <p class="text-xs text-red-400 font-mono mb-4">${app.version} • ${app.size}</p>
+                    <p class="text-gray-300 text-xs leading-relaxed bg-black/30 p-4 rounded-xl text-right mb-6 border border-white/5">
+                        ${app.description}
+                    </p>
+                    <a href="${app.downloadUrl}" class="block w-full py-3 rounded-xl bg-red-600 text-white font-bold text-sm shadow-lg hover:bg-red-700 transition-colors">
+                        داگرتنا ڕاستەوخۆ
+                    </a>
+                </div>
+            `;
+            document.getElementById('appModal').classList.remove('hidden');
+        }
+
+        function closeAppModal() {
+            document.getElementById('appModal').classList.add('hidden');
+        }
+
+        function openVIPModal() { document.getElementById('vipModal').classList.remove('hidden'); }
+        function closeVIPModal() { document.getElementById('vipModal').classList.add('hidden'); }
+
+        function openSocialModal() { document.getElementById('socialModal').classList.remove('hidden'); }
+        function closeSocialModal() { document.getElementById('socialModal').classList.add('hidden'); }
+
+        function updateFileName(input, targetId) {
+            if (input.files && input.files[0]) {
+                document.getElementById(targetId).innerText = input.files[0].name;
+                document.getElementById(targetId).classList.add('text-red-400', 'font-bold');
+            }
+        }
+
+        function startSigning() {
+            const ipa = document.getElementById('ipaFile').files[0];
+            const p12 = document.getElementById('p12File').files[0];
+
+            if (!ipa || !p12) {
+                alert('تکایە فایلا IPA و بڕوانامایا .p12 هەڵبژێرە!');
+                return;
+            }
+
+            alert('دەستپێکرنا پرۆسێسا ئیمزاکرنێ... تکایە بپێتڤی بگەڕێ!');
+        }
+
+        document.addEventListener('DOMContentLoaded', renderApps);
+    </script>
+</body>
+</html>
+
+
