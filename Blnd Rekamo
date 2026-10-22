@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ckb" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>چوونەژوورەوەی هاوچەرخ - Modern Kurdish Login 2025</title>
+    
+    <!-- Google Fonts: Readex Pro & Vazirmatn for stunning Kurdish typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&family=Vazirmatn:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS Script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        kurdish: ['Vazirmatn', 'Readex Pro', 'sans-serif'],
+                    },
+                    colors: {
+                        kurdGold: '#FFB800',
+                        kurdRed: '#FF3B30',
+                        kurdGreen: '#34C759',
+                        neonCyan: '#00F2FE',
+                        neonPurple: '#4FACFE',
+                    },
+                    animation: {
+                        'float-slow': 'float 8s ease-in-out infinite',
+                        'float-reverse': 'floatReverse 10s ease-in-out infinite',
+                        'pulse-glow': 'pulseGlow 3s infinite alternate',
+                        'spin-slow': 'spin 12s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                            '50%': { transform: 'translateY(-25px) rotate(5deg)' },
+                        },
+                        floatReverse: {
+                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                            '50%': { transform: 'translateY(25px) rotate(-5deg)' },
+                        },
+                        pulseGlow: {
+                            '0%': { boxShadow: '0 0 15px rgba(0, 242, 254, 0.2), 0 0 30px rgba(79, 172, 254, 0.2)' },
+                            '100%': { boxShadow: '0 0 25px rgba(0, 242, 254, 0.6), 0 0 50px rgba(255, 184, 0, 0.4)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Vazirmatn', 'Readex Pro', sans-serif;
+            background-color: #0B0F17;
+            overflow-x: hidden;
+        }
+
+        /* Modern Glassmorphism effect */
+        .glass-card {
+            background: rgba(18, 26, 43, 0.55);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        /* Radiant neon animated border */
+        .gradient-border-wrapper {
+            position: relative;
+            border-radius: 1.5rem;
+            padding: 2px;
+            background: linear-gradient(135deg, rgba(0,242,254,0.6), rgba(255,184,0,0.4), rgba(255,59,48,0.5), rgba(79,172,254,0.6));
+            background-size: 300% 300%;
+            animation: gradientBorder 8s ease infinite;
+        }
+
+        @keyframes gradientBorder {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Custom Input styling and focus effect */
+        .input-group {
+            position: relative;
+        }
+
+        .custom-input {
+            background: rgba(10, 15, 26, 0.6);
+            border: 1.5px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .custom-input:focus {
+            border-color: #00F2FE;
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.25);
+            background: rgba(15, 23, 42, 0.85);
+        }
+
+        /* Floating label transition */
+        .custom-input:placeholder-shown ~ .floating-label {
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.95rem;
+            color: #9CA3AF;
+        }
+
+        .custom-input:focus ~ .floating-label,
+        .custom-input:not(:placeholder-shown) ~ .floating-label {
+            top: -0.6rem;
+            transform: translateY(0);
+            font-size: 0.75rem;
+            color: #00F2FE;
+            background: #111827;
+            padding: 0 8px;
+            border-radius: 4px;
+        }
+
+        /* Ripple effect on click */
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            transform: scale(0);
+            animation: ripple-animation 0.6s linear;
+            background: rgba(255, 255, 255, 0.4);
+            pointer-events: none;
+        }
+
+        @keyframes ripple-animation {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        /* Custom Glow Orbs */
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.45;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 relative bg-[#090D16] text-white">
+
+    <!-- Ambient Glowing Background Orbs -->
+    <div class="orb w-96 h-96 bg-cyan-500 top-[-10%] right-[-5%] animate-float-slow"></div>
+    <div class="orb w-80 h-80 bg-amber-500 bottom-[-10%] left-[-5%] animate-float-reverse"></div>
+    <div class="orb w-72 h-72 bg-red-500 top-[40%] left-[20%] opacity-30 animate-pulse-glow"></div>
+
+    <!-- Kurdish Sun Emblem Visual Accent (Top Center Subtle Background Overlay) -->
+    <div class="absolute opacity-5 pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <svg class="w-[600px] h-[600px] text-yellow-400 animate-spin-slow" viewBox="0 0 100 100" fill="currentColor">
+            <circle cx="50" cy="50" r="20" />
+            <path d="M50 0 L53 25 L50 20 L47 25 Z" />
+            <path d="M50 100 L53 75 L50 80 L47 75 Z" />
+            <path d="M0 50 L25 53 L20 50 L25 47 Z" />
+            <path d="M100 50 L75 53 L80 50 L75 47 Z" />
+            <!-- Sun Rays -->
+            <g transform="rotate(22.5 50 50)"><rect x="48" y="5" width="4" height="20" rx="2"/></g>
+            <g transform="rotate(45 50 50)"><rect x="48" y="5" width="4" height="20" rx="2"/></g>
+            <g transform="rotate(67.5 50 50)"><rect x="48" y="5" width="4" height="20" rx="2"/></g>
+            <g transform="rotate(112.5 50 50)"><rect x="48" y="5" width="4" height="20" rx="2"/></g>
+            <g transform="rotate(135 50 50)"><rect x="48" y="5" width="4" height="20" rx="2"/></g>
+            <g transform="rotate(157.5 50 50)"><rect x="48" y="5" width="4" height="20" rx="2"/></g>
+        </svg>
+    </div>
+
+    <!-- Main Container Card Wrap -->
+    <div class="w-full max-w-md gradient-border-wrapper z-10 transition-all duration-500 hover:scale-[1.01]">
+        <div class="glass-card rounded-[1.4rem] p-8 sm:p-10 text-right relative overflow-hidden">
+            
+            <!-- Top Header & Kurdish Flag Accent Line -->
+            <div class="flex justify-center mb-6">
+                <div class="h-1.5 w-24 rounded-full flex overflow-hidden shadow-lg shadow-amber-500/20">
+                    <div class="w-1/3 bg-red-500"></div>
+                    <div class="w-1/3 bg-white flex items-center justify-center">
+                        <div class="w-2 h-2 rounded-full bg-yellow-400"></div>
+                    </div>
+                    <div class="w-1/3 bg-green-500"></div>
+                </div>
+            </div>
+
+            <!-- Header Titles -->
+            <div class="text-center mb-8">
+                <h1 class="text-3xl font-extrabold tracking-wide text-transparent bg-clip-text bg-gradient-to-l from-cyan-400 via-amber-300 to-white mb-2">
+                    بەخێربێنەوە
+                </h1>
+                <p class="text-sm text-gray-400 font-light">
+                    تکایە زانیارییەکانی چوونەژوورەوە بنووسە
+                </p>
+            </div>
+
+            <!-- Form Start -->
+            <form id="loginForm" onsubmit="handleLogin(event)" class="space-y-6" novalidate>
+                
+                <!-- Username Field -->
+                <div class="input-group">
+                    <div class="relative flex items-center">
+                        <!-- Left Icon inside input -->
+                        <div class="absolute left-4 text-gray-400 transition-colors duration-300 pointer-events-none group-focus-within:text-cyan-400">
+                            <i class="fa-solid fa-user-astronaut text-lg"></i>
+                        </div>
+
+                        <!-- Input -->
+                        <input 
+                            type="text" 
+                            id="username" 
+                            required
+                            placeholder=" " 
+                            class="custom-input w-full pr-4 pl-12 py-3.5 rounded-xl text-gray-100 placeholder-transparent outline-none transition-all duration-300 font-medium"
+                        />
+
+                        <!-- Floating Label -->
+                        <label 
+                            for="username" 
+                            class="floating-label absolute right-4 transition-all duration-300 pointer-events-none text-gray-400 font-medium"
+                        >
+                            ناوی بەکارهێنەر
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Password Field -->
+                <div class="input-group">
+                    <div class="relative flex items-center">
+                        <!-- Toggle Password Button (Left side for RTL layout) -->
+                        <button 
+                            type="button" 
+                            onclick="togglePasswordVisibility()" 
+                            class="absolute left-3 p-1.5 text-gray-400 hover:text-cyan-400 transition-colors duration-300 focus:outline-none"
+                            title="نیشاندان/شاردنەوەی وشەی تێپەڕ"
+                            aria-label="Toggle Password"
+                        >
+                            <i id="toggleEyeIcon" class="fa-solid fa-eye text-lg"></i>
+                        </button>
+
+                        <!-- Input -->
+                        <input 
+                            type="password" 
+                            id="password" 
+                            required
+                            placeholder=" " 
+                            class="custom-input w-full pr-4 pl-12 py-3.5 rounded-xl text-gray-100 placeholder-transparent outline-none transition-all duration-300 font-medium"
+                        />
+
+                        <!-- Floating Label -->
+                        <label 
+                            for="password" 
+                            class="floating-label absolute right-4 transition-all duration-300 pointer-events-none text-gray-400 font-medium"
+                        >
+                            وشەی تێپەڕ (کۆدی نهێنی)
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Remember Me & Forgot Password Options -->
+                <div class="flex items-center justify-between text-xs sm:text-sm text-gray-300">
+                    <label class="flex items-center space-x-2 space-x-reverse cursor-pointer select-none">
+                        <input type="checkbox" class="w-4 h-4 rounded border-gray-700 bg-gray-900/50 text-cyan-500 focus:ring-cyan-400/30 focus:ring-offset-0 transition duration-200">
+                        <span class="text-gray-300 hover:text-white transition">لەبیرم بگرە</span>
+                    </label>
+                    <a href="#" class="text-cyan-400 hover:text-amber-300 transition duration-200 hover:underline">
+                        وشەی تێپەڕت لەبیرچووە؟
+                    </a>
+                </div>
+
+                <!-- Submit Button -->
+                <button 
+                    type="submit" 
+                    id="submitBtn"
+                    class="relative w-full py-4 bg-gradient-to-r from-cyan-500 via-blue-600 to-amber-500 hover:from-cyan-400 hover:via-blue-500 hover:to-amber-400 text-white font-bold rounded-xl shadow-lg shadow-cyan-500/25 hover:shadow-amber-500/40 transition-all duration-300 transform active:scale-95 overflow-hidden flex items-center justify-center space-x-2 space-x-reverse"
+                >
+                    <span id="btnText" class="text-base tracking-wide font-bold">چوونەژوورەوە</span>
+                    <i id="btnIcon" class="fa-solid fa-arrow-left transition-transform duration-300 group-hover:-translate-x-1"></i>
+                    
+                    <!-- Loading Spinner (Hidden by default) -->
+                    <div id="btnSpinner" class="hidden animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent"></div>
+                </button>
+            </form>
+
+            <!-- Social Login Divider -->
+            <div class="mt-8 relative flex py-2 items-center justify-center">
+                <div class="flex-grow border-t border-gray-700/60"></div>
+                <span class="flex-shrink mx-4 text-xs text-gray-400">یان چوونەژوورەوە بە</span>
+                <div class="flex-grow border-t border-gray-700/60"></div>
+            </div>
+
+            <!-- Social Options -->
+            <div class="grid grid-cols-2 gap-3 mt-4">
+                <button class="flex items-center justify-center gap-2 py-2.5 px-4 bg-slate-800/60 hover:bg-slate-700/70 border border-slate-700/50 rounded-xl transition duration-200 text-sm font-medium text-gray-200 hover:border-cyan-500/50">
+                    <i class="fa-brands fa-google text-red-400"></i>
+                    <span>گووگڵ</span>
+                </button>
+                <button class="flex items-center justify-center gap-2 py-2.5 px-4 bg-slate-800/60 hover:bg-slate-700/70 border border-slate-700/50 rounded-xl transition duration-200 text-sm font-medium text-gray-200 hover:border-cyan-500/50">
+                    <i class="fa-brands fa-apple text-white"></i>
+                    <span>ئەپڵ</span>
+                </button>
+            </div>
+
+            <!-- Registration Footer Link -->
+            <p class="text-center text-sm text-gray-400 mt-8">
+                ئەکاونتت نییە؟ 
+                <a href="#" onclick="toggleMode(event)" class="text-amber-400 font-semibold hover:text-amber-300 transition hover:underline">
+                    تۆمارببە (هەژماری نوێ)
+                </a>
+            </p>
+
+            <!-- Notification Toast Popup -->
+            <div id="toast" class="hidden absolute top-4 left-4 right-4 bg-emerald-500/90 text-white p-3 rounded-xl shadow-2xl backdrop-blur-md flex items-center justify-between text-xs sm:text-sm animate-bounce">
+                <div class="flex items-center space-x-2 space-x-reverse">
+                    <i class="fa-solid fa-circle-check text-lg"></i>
+                    <span id="toastMsg">بە سەرکەوتوویی چوویتە ژوورەوە!</span>
+                </div>
+                <button onclick="hideToast()" class="text-white hover:text-gray-200"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JavaScript Features & Interactions -->
+    <script>
+        // Toggle Password Visibility
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('password');
+            const eyeIcon = document.getElementById('toggleEyeIcon');
+
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                eyeIcon.classList.remove('fa-eye');
+                eyeIcon.classList.add('fa-eye-slash');
+                eyeIcon.classList.add('text-cyan-400');
+            } else {
+                passwordInput.type = 'password';
+                eyeIcon.classList.remove('fa-eye-slash');
+                eyeIcon.classList.remove('text-cyan-400');
+                eyeIcon.classList.add('fa-eye');
+            }
+        }
+
+        // Click Ripple Interactive Effect on Submit Button
+        document.getElementById('submitBtn').addEventListener('click', function (e) {
+            const button = e.currentTarget;
+            const circle = document.createElement('span');
+            const diameter = Math.max(button.clientWidth, button.clientHeight);
+            const radius = diameter / 2;
+
+            const rect = button.getBoundingClientRect();
+            circle.style.width = circle.style.height = `${diameter}px`;
+            circle.style.left = `${e.clientX - rect.left - radius}px`;
+            circle.style.top = `${e.clientY - rect.top - radius}px`;
+            circle.classList.add('ripple');
+
+            const existingRipple = button.querySelector('.ripple');
+            if (existingRipple) {
+                existingRipple.remove();
+            }
+
+            button.appendChild(circle);
+        });
+
+        // Form Submission Interaction Logic
+        function handleLogin(e) {
+            e.preventDefault();
+
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            if (!username || !password) {
+                showToast('تکایە سەرجەم خانەکان پڕبکەرەوە!', true);
+                return;
+            }
+
+            // UI Loading state
+            const btnText = document.getElementById('btnText');
+            const btnIcon = document.getElementById('btnIcon');
+            const btnSpinner = document.getElementById('btnSpinner');
+
+            btnText.innerText = 'چاوەڕوانبە...';
+            btnIcon.classList.add('hidden');
+            btnSpinner.classList.remove('hidden');
+
+            // Simulate Network Request Delay
+            setTimeout(() => {
+                btnText.innerText = 'چوونەژوورەوە';
+                btnIcon.classList.remove('hidden');
+                btnSpinner.classList.add('hidden');
+
+                showToast(`بەخێربێیتەوە ${username}! بەسەرکەوتوویی چوویتە ژوورەوە.`, false);
+            }, 1800);
+        }
+
+        // Show Toast Notification
+        function showToast(message, isError = false) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+
+            toastMsg.innerText = message;
+
+            if (isError) {
+                toast.classList.remove('bg-emerald-500/90');
+                toast.classList.add('bg-rose-600/90');
+            } else {
+                toast.classList.remove('bg-rose-600/90');
+                toast.classList.add('bg-emerald-500/90');
+            }
+
+            toast.classList.remove('hidden');
+
+            setTimeout(() => {
+                hideToast();
+            }, 4000);
+        }
+
+        function hideToast() {
+            document.getElementById('toast').classList.add('hidden');
+        }
+
+        // Toggle Registration / Login Mode UI Text Swap Demonstration
+        let isRegistration = false;
+        function toggleMode(e) {
+            e.preventDefault();
+            isRegistration = !isRegistration;
+
+            const headerTitle = document.querySelector('h1');
+            const submitBtnText = document.getElementById('btnText');
+            const footerText = document.querySelector('.mt-8.text-center');
+
+            if (isRegistration) {
+                headerTitle.innerText = 'دروستکردنی هەژمار';
+                submitBtnText.innerText = 'تۆماربوون';
+                footerText.innerHTML = `ئەکاونتت هەیە؟ <a href="#" onclick="toggleMode(event)" class="text-amber-400 font-semibold hover:text-amber-300 transition hover:underline">چوونەژوورەوە</a>`;
+            } else {
+                headerTitle.innerText = 'بەخێربێنەوە';
+                submitBtnText.innerText = 'چوونەژوورەوە';
+                footerText.innerHTML = `ئەکاونتت نییە؟ <a href="#" onclick="toggleMode(event)" class="text-amber-400 font-semibold hover:text-amber-300 transition hover:underline">تۆمارببە (هەژماری نوێ)</a>`;
+            }
+        }
+    </script>
+</body>
+</html>
